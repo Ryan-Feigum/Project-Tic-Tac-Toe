@@ -145,20 +145,23 @@ const GameController = (gameBoard) => {
         initializeGame(cells, statusText, startGameBtn, restartBtn);
     };
 
+    // Encapsulate local DOM elements
+    const startGameBtn = document.querySelector("#startGameBtn");
+    const restartBtn = document.querySelector("#restartBtn");
+    const playerOneNameInput = document.querySelector("#playerOneName");
+    const playerTwoNameInput = document.querySelector("#playerTwoName");
+    const inputContainer = document.querySelector("#inputContainer");
+    const restartContainer = document.querySelector("#restartContainer");
+
     return { startGame };
 };
 
 // Main script ------------------------------------------------
 
-// Get DOM elements
+// Get global DOM elements
 const cells = document.querySelectorAll(".cell");
 const statusText = document.querySelector("#statusText");
-const startGameBtn = document.querySelector("#startGameBtn");
-const restartBtn = document.querySelector("#restartBtn");
-const playerOneNameInput = document.querySelector("#playerOneName");
-const playerTwoNameInput = document.querySelector("#playerTwoName");
-const inputContainer = document.querySelector("#inputContainer");
-const restartContainer = document.querySelector("#restartContainer");
+
 
 // Create the game board and controller
 const gameBoard = GameBoard();
