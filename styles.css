@@ -19,3 +19,7 @@
     width: 225px;
     margin: auto;
 }
+
+#restartContainer {
+    display: none;
+}
